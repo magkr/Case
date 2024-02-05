@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  backend:
+    build:
+      dockerfile: Backend/Dockerfile
+    depends_on: [mssql]
+    ports:
+      - "5057:80"
+  mssql:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: mssql
+    hostname: mssql
+    environment:
+      MSSQL_SA_PASSWORD: "<VeryStrongPassw0rd>"
+      ACCEPT_EULA: "Y"
+    restart: unless-stopped
+    ports:
+      - "11433:1433"
+  migrate:
+    build:
+      dockerfile: Backend/Dockerfile
+    depends_on:
+      - mssql
+    entrypoint: ["dotnet", "ef", "database", "update"]
