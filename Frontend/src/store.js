@@ -15,7 +15,6 @@ export const useStore = defineStore('store', {
             this.clear()
             await axios.get(`https://localhost:7096/api/userprofiles/${email}`)
                 .then((response) => {
-                    console.log(response)
                     this.currentUserProfile = response.data;
                 })
                 .catch((error) => {
@@ -42,8 +41,7 @@ export const useStore = defineStore('store', {
         async deleteUserProfile(email) {
             this.clear()
             await axios.delete(`https://localhost:7096/api/userprofiles/${email}`)
-                .then((response) => {
-                    console.log(response)
+                .then(() => {
                 })
                 .catch((error) => {
                     this.error = error;
