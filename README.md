@@ -1,4 +1,4 @@
-# Koda
+# Case
 
 ## Backend (Web API) & Tests
 
