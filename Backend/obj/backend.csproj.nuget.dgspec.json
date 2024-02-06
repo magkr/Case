@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mag/Desktop/projects/koda/Backend/backend.csproj": {}
+    "/Users/mag/Desktop/projects/koda/backend/backend.csproj": {}
   },
   "projects": {
-    "/Users/mag/Desktop/projects/koda/Backend/backend.csproj": {
+    "/Users/mag/Desktop/projects/koda/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mag/Desktop/projects/koda/Backend/backend.csproj",
+        "projectUniqueName": "/Users/mag/Desktop/projects/koda/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "/Users/mag/Desktop/projects/koda/Backend/backend.csproj",
+        "projectPath": "/Users/mag/Desktop/projects/koda/backend/backend.csproj",
         "packagesPath": "/Users/mag/.nuget/packages/",
-        "outputPath": "/Users/mag/Desktop/projects/koda/Backend/obj/",
+        "outputPath": "/Users/mag/Desktop/projects/koda/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mag/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.1, )"
